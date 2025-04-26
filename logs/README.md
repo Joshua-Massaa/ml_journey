@@ -85,3 +85,35 @@ Overfitting is a key challenge to watch for. I’m excited to dive into techniqu
 This lesson helped cement my understanding of **regularization**. The fact that MSE didn’t change much for smaller alphas but jumped at alpha=1000 clearly showed the cost of over-penalization. Visualizing the shrinkage of weights made it easier to grasp why Ridge is useful—it’s not just about performance but also model simplicity and robustness.
 
 ---
+
+# Lesson 6 – Polynomial Regression
+
+### What I Learned
+- How to create **polynomial features** (like \(x^2\)) to capture curves in data.
+- Built both a **Linear Regression** and a **Polynomial Regression** model.
+- Saw how simple linear models struggle with non-linear data.
+- Learned to use `PolynomialFeatures` from scikit-learn to **expand** inputs smartly.
+
+### Tools Used
+- Scikit-learn (`LinearRegression`, `PolynomialFeatures`, `mean_squared_error`)
+
+### Experiments
+- Generated random data with a **quadratic** relationship.
+- Trained a **Linear Regression** model — it **underfit** (couldn't capture the curve).
+- Trained a **Polynomial Regression** model — it **fit the data much better**.
+- Compared **MSE** between the two models to see the performance difference.
+
+### Results
+- **Polynomial Regression** had a **much lower MSE** than basic Linear Regression.
+- Visualizations made it very clear how feature expansion can capture complexity.
+
+### Reflections
+- Sometimes "simple" linear models aren't enough.
+- Carefully adding new features (like \(x^2\), \(x^3\)) can unlock better predictions.
+- I’m starting to see **how model complexity and data shape connect**.
+
+---
+
+# Files Added
+- polynomial_regression.py
+
