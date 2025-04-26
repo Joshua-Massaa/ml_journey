@@ -52,3 +52,23 @@ mse_poly = mean_squared_error(y, y_pred_poly)
 print(f"MSE Linear Regression: {mse_linear:.4f}")
 print(f"MSE Polynomial Regression: {mse_poly:.4f}")
 
+# Degree 5 Polynomial
+poly_features_5 = PolynomialFeatures(degree=5, include_bias=False)
+X_poly_5 = poly_features_5.fit_transform(X)
+
+poly_reg_5 = LinearRegression()
+poly_reg_5.fit(X_poly_5, y)
+
+y_pred_poly_5 = poly_reg_5.predict(X_poly_5)
+
+# Plot
+plt.scatter(X, y, color='blue', label='Actual')
+plt.scatter(X, y_pred_poly_5, color='purple', label='Degree 5 Prediction', s=10)
+plt.legend()
+plt.title("Polynomial Regression (Degree 5)")
+plt.show()
+
+# Evaluate
+mse_poly_5 = mean_squared_error(y, y_pred_poly_5)
+print(f"MSE Polynomial Regression (Degree 5): {mse_poly_5:.4f}")
+

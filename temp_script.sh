@@ -1,0 +1,8 @@
+#!/bin/bash
+
+git status
+git add .
+git commit
+git push origin main
+
+
