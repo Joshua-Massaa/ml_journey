@@ -13,7 +13,7 @@ git add .
 git commit -m "Added lesson $commit_message material."
 
 # Push to the remote repository
-git push origin main
+git push
 
 
 
