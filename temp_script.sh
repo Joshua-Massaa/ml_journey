@@ -1,5 +1,7 @@
 #!/bin/bash
 
+git status
+
 # Ask for lesson
 echo "Current Lesson?: "
 read commit_message
@@ -11,6 +13,7 @@ git add .
 git commit -m "Added lesson $commit_message material."
 
 # Push to the remote repository
-git push
+git push origin main
+
 
 
